@@ -1,33 +1,24 @@
-Nim=input("Masukan Nim Anda: ")
-Nama=input("Masukan Nama Anda: ")
+# Input data
+nama = input("Masukkan nama lengkap anda: ")
+nim = input("Masukkan NIM anda: ")
+harga = float(input("Masukkan harga laptop: Rp "))
 
-Harga = int(input("Masukkan harga laptop: "))
+# Daftar diskon dalam persen
+laptop = {"Acer": 5, "Asus": 7, "Lenovo": 10}
 
-print("\nPilih merek laptop:")
-print("1. Acer (diskon 5%)")
-print("2. Asus (diskon 7%)")
-print("3. Lenovo (diskon 10%)")
+# Output awal
+print("\n===================================")
+print(f"{nama} dengan NIM {nim} ingin membeli laptop seharga Rp {harga:,.0f}")
+print("Berikut harga laptop setelah diskon tiap merek:")
+print("===================================")
 
-pilihan = int(input("Masukkan pilihan (1-3): "))
+# tabel 
+print("Merek\t Diskon\t Harga Akhir")
+print("-----------------------------------")
 
-match pilihan:
-    case 1:
-        merek, persen_diskon = "Acer", 5
-    case 2:
-        merek, persen_diskon = "Asus", 7
-    case 3:
-        merek, persen_diskon = "Lenovo", 10
-    case _:
-        merek, persen_diskon = "Tidak valid", 0
-
-diskon = Harga * (persen_diskon / 100)
-harga_akhir = Harga - diskon
-
-print("\n===== STRUK PEMBELIAN =====")
-print(f"Merek Laptop : {Nim}")
-print(f"Merek Laptop : {Nama}")
-print(f"Merek Laptop : {merek}")
-print(f"Harga Awal   : Rp{Harga:,}")
-print(f"Diskon       : {persen_diskon}% (Rp{int(diskon):,})")
-print(f"Harga Akhir  : Rp{int(harga_akhir):,}")
-print("============================")
+# Perulangan untuk hitung diskon tiap merek
+for merek, diskon_persen in laptop.items():
+    diskon = harga * (diskon_persen / 100)
+    harga_akhir = harga - diskon
+    print(f"{merek}\t   {diskon_persen}%\tRp{harga_akhir:,.0f}")
+print("-----------------------------------")
