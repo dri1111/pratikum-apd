@@ -1,4 +1,3 @@
-
 Nama_Mahasiswa = "Adri Ansyah"
 NIM_Mahasiswa = "2509106110"
 
@@ -25,7 +24,7 @@ if nama == Nama_Mahasiswa and nim == NIM_Mahasiswa:
         print("Pembayaran Kuliah Mahasiswa :", total)
 
     elif pilihan == "2":
-        bayar = 0.05 * 6000000
+        bayar = 0.05 * 6000000  
         total = 6000000 + bayar
         cicilan = total / 2
         print("\n=== Pembayaran Cicilan 2x ===")
