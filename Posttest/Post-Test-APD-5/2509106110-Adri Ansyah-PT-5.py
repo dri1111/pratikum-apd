@@ -16,7 +16,7 @@ while Devil_fruits != "5":
     if Devil_fruits == "1":
         nama_fruits = input("Masukkan nama fruits: ")
         Fruits.append(nama_fruits)
-        print("Skill Fruits berhasil ditambah.")
+        print("Fruits berhasil ditambah.")
 
     elif Devil_fruits == "2":
         print("\n=== Daftar Fruits ===")
@@ -49,7 +49,7 @@ while Devil_fruits != "5":
         print("Fruits berhasil dihapus.")
 
     elif Devil_fruits == "5":
-        print("Program selesai.")
+        print()
 
     else:
         print("Pilihan tidak valid.")
